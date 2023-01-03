@@ -1,0 +1,331 @@
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:300,400,600);
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+
+*, *:before, *:after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  background: url(https://images.pexels.com/photos/230482/pexels-photo-230482.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb) center center no-repeat;
+  background-size: cover;
+  font-family: 'Open Sans';
+  font-size: 16px;
+  font-weight: 300;
+  character-height: 90%;
+}
+._pull-left {
+  float: left;
+}
+._pull-right {
+  float: right;
+}
+
+.screen {
+  background: rgba(255, 255, 255, 0.2);
+  border: 1px solid rgba(236,233,192,0.25);
+  border-radius: 0.5em;
+  color: #FED;
+  height: 440px;
+  margin: 2em auto;
+  overflow: hidden;
+  position: relative;
+  width: 800px;
+}
+
+.header, .footer, .main {
+  position: absolute;
+  left: 0;
+  right: 0;
+}
+.header {
+  background: rgba(252, 185, 84, 0.1);
+  height: 2.75em;
+}
+.footer {
+  height: 2.25em;
+}
+.header {
+  letter-spacing: 2px;
+  padding: 5px 10px;
+  top: 0;
+}
+.header__greeting {
+  font-size: 1.5em;
+  line-height: 35px;
+  vertical-align: middle;
+}
+.header__controls {
+  color: rgba(41, 20, 0, 0.5);
+  font-size: 1.35em;
+}
+
+.main {
+  border-style: solid;
+  border-color: rgba(236,233,192,0.25);
+  border-width: 1px 0;
+  top: 2.75em;
+  bottom: 2.25em;
+}
+.main__sidebar {
+  border-right: 1px solid rgba(236,233,192,0.25);
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  width: 25%;
+}
+.main__sidebar__postlist {
+  height: 100%;
+}
+.main__sidebar__postlist li {
+  border-bottom: 1px solid rgba(236,233,192,0.1);
+  font-size: 0.7em;
+  padding: 1em;
+}
+.main__content__wrap {
+  height: 100%;
+  overflow: hidden;
+  width: 75%;
+}
+.main__content__planning {
+  border-bottom: 1px solid rgba(236,233,192,0.25);
+  height: 50%;
+  overflow: hidden;
+}
+.main__content__planning > div {
+  float: left;
+  height: 100%;
+}
+.planning__calendar {
+  width: 45%;
+  border-right: 1px solid rgba(236,233,192,0.1);
+}
+.planning__calendar__dates .day-square {
+  float: left;
+  font-size: 0.8em;
+  font-weight: 600;
+  line-height: 1.85em;
+  height: 1.85em;
+  text-align: center;
+  width: 14.2857142857143%;
+}
+.planning__calendar__dates .day-square.active {
+  background: #F2AA61;
+  color: #494339;
+}
+.day-square.day-name {
+  font-weight: 300;
+}
+.planning__agenda {
+  width: 30%;
+  border-right: 1px solid rgba(236,233,192,0.25);
+}
+.planning__titlebar {
+  background: rgba(236,233,192,0.1);
+  border-bottom: 1px solid rgba(236,233,192,0.25);
+  font-size: 0.85em;
+  letter-spacing: 2px;
+  line-height: 2em;
+  text-align: center;
+  width: 100%;
+}
+.planning__agenda__schedule ul {
+  font-size: 0.8em;
+  list-style: none;
+}
+.planning__agenda__schedule ul li {
+  display: block;
+  float: left;
+  padding: 0.25em;
+  width: 100%;
+}
+.appt--done {
+  background: rgba(50, 0, 0, 0.2);
+  color: #8c8073;
+  text-decoration: line-through;
+}
+.appt--time {
+  font-weight: 600;
+  display: inline-block;
+  width: 20%;
+}
+.appt--time:after {
+  font-size: 0.6em;
+  font-weight: 300;
+  margin: 0.25em;
+  text-transform: uppercase;
+}
+.appt--done .appt--time {
+  text-decoration: line-through;
+}
+.appt--time.morning:after {
+  content: 'am';
+}
+.appt--time.afternoon:after {
+  content: 'pm';
+}
+.appt--active {
+  background: rgba(252, 185, 84, 0.2);
+  color: #fcb954;
+}
+.planning__weather {
+  background: rgba(0, 0, 24, 0.45);
+  padding-top: 1em;
+  text-align: center;
+  width: 25%;
+}
+.planning__weather > span {
+  display: block;
+}
+.planning__weather--location {
+  color: #3C68A0;
+  font-size: 1.5em;
+}
+.planning__weather--conditions {
+  color: #999;
+  font-size: 0.85em;
+}
+.planning__weather--precip {
+  color: #999;
+  font-size: 0.85em;
+  font-weight: 400;
+  line-height: 3em;
+  margin: 0.5em 0 0.25em;
+  position: relative;
+}
+.planning__weather--precip i {
+  color: #5B83B7;
+  position: absolute;
+  left: 35%;
+  font-size: 3em;
+  z-index: -1;
+}
+.planning__weather--temp {
+  color: #ccc;
+  font-size: 2.5em;
+  line-height: 1em;
+}
+.planning__weather--temp:after {
+  content: '\00b0';
+  position: absolute;
+}
+
+.main__content__menu {
+  overflow: hidden;
+  padding-left: 1em;
+}
+.main__content__menu__section {
+  float: left;
+  height: 100%;
+}
+.main__content__menu__section--title {
+  font-weight: 600;
+  padding: 5px;
+  text-align: center;
+}
+.menu__items {
+  float: left;
+  list-style: none;
+  padding: 5px;
+  width: 12em;
+}
+.menu__item {
+  border-radius: 1em;
+  float: left;
+  font-size: 0.85em;
+  padding: 0.25em 1em;
+  white-space: nowrap;
+  width: 100%;
+}
+.menu__item.active {
+  background: #3C68A0;
+}
+.menu__item__name {
+  display: inline-block;
+  font-weight: 400;
+  width: 8em;
+}
+.menu__item__cost {
+  display: inline-block;
+  font-weight: 600;
+}
+.menu__item__cost--cents {
+  font-size: 0.7em;
+  line-height: 1.7em;
+  vertical-align: top;
+}
+.menu__item__cost--quantity {
+  background: #fff;
+  border-radius: 100%;
+  color: #000;
+  display: inline-block;
+  margin-left: 0.5em;
+  text-align: center;
+  height: 1.5em;
+  width: 1.5em;
+}
+
+.footer {
+  bottom: 0;
+}
+.social {
+  float: left;
+  height: 100%;
+  overflow: hidden;
+  width: 25%;
+}
+.social__tiles {
+  height: 100%;
+  list-style: none;
+}
+.social__tile {
+  border-right: 1px solid rgba(236,233,192,0.25);
+  color: #666;
+  float: left;
+  height: 100%;
+  line-height: 2em;
+  text-align: center;
+  width: 20%;
+  vertical-align: middle;
+}
+.social__tile.active {
+  color: #8FAFAF;
+}
+.pos {
+  float: right;
+  font-weight: 600;
+  height: 100%;
+  width: 75%;
+}
+.pos > div {
+  float: left;
+  padding: 5px;
+  height: 100%;
+}
+.pos__location {
+  width: 50%;
+}
+.pos__location i {
+  margin: auto 0.5em auto 2em;
+}
+.pos__cart {
+  width: 10%;
+}
+div.pos__payment {
+  background: rgba(60, 104, 160, 0.25);
+  border-left: 1px solid #133D74;
+  color: #133D74;
+  float: right;
+  font-size: 0.8em;
+  
+  letter-spacing: 1px;
+  line-height: 1.75em;
+  padding: 0.5em 1em;
+  text-transform: uppercase;
+  vertical-align: absmiddle;
+}
+.pos__payment i {
+  font-size: 1.25em;
+  margin-right: 5px;
+}
+
